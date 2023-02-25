@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- 
+    <H1>{{body}}</H1>
+    {% for n in list %}
+    <div>
+      {{forloop.counter}}  {{n}}
+    </div>
+    {% endfor %}
+    <br>
+    <table border="1 solid" cellpadding="10"> 
+        <tr>
+            <th>Name</th>
+            <th>Phone number</th>
+        </tr>
+        {% for d in students  %}
+        <tr>
+            <td>{{d.name}}</td>
+            <td>{{d.phone}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <img src="static/image/everest.jpg" alt=""> -->
+
+    <main>
+        <section>
+          <img src="static/image/everest.jpg" alt="My Company">
+        </section>
+        <section>
+          <h2>Welcome to My Company</h2>
+          <p>My Company is a global leader in the <strong>industry</strong>, providing high-quality <strong>products</strong> and <strong>services</strong> to customers around the world. With over <strong>20 years</strong> of experience and a team of <strong>500+</strong> talented professionals, we are dedicated to delivering innovative solutions that meet the evolving needs of our customers.</p>
+          <p>Explore our website to learn more about our company, our products, and our commitment to quality, safety, and sustainability.</p>
+        </section>
+      </main>
+
+
+    {% endblock %}
+
+
+

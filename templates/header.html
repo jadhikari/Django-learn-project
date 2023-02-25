@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  </head>
+  <body>
+    <header>
+      <h1>My Website</h1>
+      <nav>
+        <ul>
+          <!-- <li class="{% if request.path == '/' %}active {% endif %}"><a href="{% url 'home' %}">Home</a></li>
+          <li class="{% if request.path == '/about' %}active {% endif %}"><a href="{% url 'about' %}">About</a></li>
+          <li class="{% if request.path == '/contact' %}active {% endif %}"><a href="{% url 'contact' %}">Contact</a></li> -->
+
+          {% url 'home' as url %}
+          <li class="{% if request.path == url %}active {% endif %}"><a href="{{url}}">Home</a></li>
+          {% url 'about' as url %}
+          <li class="{% if request.path == url %}active {% endif %}"><a href="{{url}}">About</a></li>
+          {% url 'contact' as url %}
+          <li class="{% if request.path == url %}active {% endif %}"><a href="{{url}}">Contact</a></li>
+          {% url 'userform' as url %}
+          <li class="{% if request.path == url %}active {% endif %}"><a href="{{url}}">User Form</a></li>
+
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- Main content goes here -->
+    </main>
+

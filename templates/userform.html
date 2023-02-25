@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div>
+    <!-- <form action="" method="GET"> 
+            <tr>
+                <td>VALUE 1</td>
+                <td>
+                    <input type="text" name="num1">
+                </td>
+            </tr>
+            <tr>
+                <td>VALUE 2</td>
+                <td>
+                    <input type="text" name="num2">
+                </td>
+            </tr>
+            <tr>
+               <td>
+                <input type="submit">
+               </td> 
+            </tr>
+            <tr>
+                <td>RESULT</td>
+                <td>{{ output }}</td>
+            </tr>
+    </form> -->
+</div>
+
+<div>
+    <form action="" method="POST"> 
+        {% csrf_token %}
+        <tr>
+            <td>VALUE 1</td>
+            <td>
+                <input type="text" name="num1" value="{{n1}}">
+            </td>
+        </tr>
+        <tr>
+            <td>VALUE 2</td>
+            <td>
+                <input type="text" name="num2"value={{n2}}>
+            </td>
+        </tr>
+        <tr>
+           <td>
+            <input type="submit">
+           </td> 
+        </tr>
+        <tr>
+            <td>RESULT</td>
+            <td>{{ output }}</td>
+        </tr>
+</form>
+</div>
+
+
+{% endblock %}

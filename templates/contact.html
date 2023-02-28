@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <main>
+  <h2>{{ result }}</h2>
     <section>
       <img src="https://media.istockphoto.com/id/1372286955/photo/contact-us.jpg?b=1&s=170667a&w=0&k=20&c=f-szSkE-FyP2zI4rkajWw7jCQrU1VUlsa6jDZm5xScQ=" 
           alt="Contact Us" style="height: 100px;">
@@ -8,12 +9,13 @@
     <section>
       <h2>Contact Us</h2>
       <p>We would love to hear from you! Please use the form below to send us a message and we will get back to you as soon as possible.</p>
-      <form>
+      <form method="POST" action="{% url 'submitform' %}">
+        {% csrf_token %}
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
 
         <label for="email">Email</label>
-        <input type="email" id="email" name="email" required>
+        <input type="text" id="email" name="email" required>
 
         <label for="message">Message</label>
         <textarea id="message" name="message" required></textarea>
